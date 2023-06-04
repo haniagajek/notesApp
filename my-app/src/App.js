@@ -7,8 +7,14 @@ const Home = () => {
   const [success, setSuccess] = useState(false);
 
   const handleDelete = (id) => {
-    const newBlogs = blogs.filter((blog) => blog.id !== id);
-    setBlogs(newBlogs);
+    // const newBlogs = blogs.filter((blog) => blog.id !== id);
+    // setBlogs(newBlogs);
+    fetch(`http://localhost:8000/notes/${id}`, {
+      method: "DELETE",
+    }).then(() => {
+      setSuccess(true);
+      fetchData();
+    });
   };
 
   // `npx json-server --watch data/db.json --port 8000`
