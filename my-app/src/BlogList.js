@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Create from "./Create";
+import Blog from "./Blog";
 
 const BlogList = ({ blogs, handleDelete, refetchData, setSuccess }) => {
   const [shown, setShown] = useState(false);
@@ -18,32 +19,7 @@ const BlogList = ({ blogs, handleDelete, refetchData, setSuccess }) => {
       </div>
       <div className="blogss">
         {blogs.map((blog) => (
-          <div className={`blog-preview ${blog.color}`} key={blog.id}>
-            <div onClick={() => handleDelete(blog.id)} className="Delete">
-              {" "}
-              =
-            </div>
-
-            {/* <div onClick={() => openEdition()} className="Edition">
-              {" "}
-              =
-            </div>
-            <div className="edit">e</div>
-            {openEdition && ( 
-              <div>
-              <div onClick={() => handleDelete(blog.id)} className="Delete">
-              {" "}
-              =
-            </div> 
-            </div>
-            )} */}
-
-            <h2 className="blogTitle">{blog.title}</h2>
-            <p className="Data">{blog.data}</p>
-            <p className="blogBody"> {blog.body}</p>
-
-            <div className="Home"></div>
-          </div>
+          <Blog key={blog.id} blog={blog} handleDelete={handleDelete} />
         ))}
       </div>
       {shown && (
