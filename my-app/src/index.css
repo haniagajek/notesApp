@@ -1,0 +1,351 @@
+@font-face {
+  font-family: ibmPlexSans;
+  src: url(IBMPlexSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: ibmPlexSansMedium;
+  src: url(IBMPlexSans-Medium.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h3 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #525252;
+}
+
+input {
+  width: 512px;
+  border: none;
+  border-bottom: 1px solid #000000;
+  height: 48px;
+}
+
+textarea {
+  width: 512px;
+  border: none;
+  border-bottom: 1px solid #000000;
+  height: 134px;
+}
+
+.Title {
+  color: #ccc3ef;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 250px;
+  /* text-align: center; */
+  position: absolute;
+  left: 28vw;
+  top: 10vh;
+  z-index: -1;
+}
+.blog-preview {
+  background-color: #fcf4d6;
+  color: #512d64;
+  width: 334px;
+  padding: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.blogss {
+  margin-top: 48px;
+  margin-left: 40px;
+}
+
+.blogTitle {
+  font-family: ibmPlexSansMedium;
+  font-size: 20px;
+  font-weight: 600;
+  width: 270px;
+  margin: 0;
+  color: #000000;
+}
+
+.Data {
+  font-family: ibmPlexSansMedium;
+  font-size: 10px;
+  font-weight: 500;
+  color: #525252;
+}
+
+.blogBody {
+  font-family: ibmPlexSans;
+  font-size: 10px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.Delete {
+  font-weight: 700;
+  float: right;
+}
+
+.inputDelete {
+  margin-top: 1rem;
+  margin-left: 23rem;
+}
+
+.Delete:hover {
+  cursor: pointer;
+  scale: 1.03;
+}
+
+.InputBox {
+  background-color: rgb(241, 229, 55);
+  position: absolute;
+  height: 14rem;
+  width: 28rem;
+  top: 36%;
+  left: 38%;
+  border-radius: 2rem;
+}
+
+.addInput {
+  width: 24rem;
+  height: 3rem;
+  font-size: 1.5em;
+  color: #512d64;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+
+.addInput:focus {
+  outline: none;
+}
+
+.smallerText {
+  font-size: 0.875em;
+}
+.biggerText {
+  padding-top: 3rem;
+  font-weight: bold;
+}
+
+.header {
+  height: 48px;
+  width: 100vw;
+  margin: 0px;
+  background-color: #161616;
+}
+
+.header_h2 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0px;
+  padding-top: 15px;
+  padding-left: 40px;
+  font-family: ibmPlexSans;
+  color: white;
+}
+
+.upperWidgets {
+  margin-left: 40px;
+  margin-top: 96px;
+  display: flex;
+  width: 95vw;
+  border-bottom: 2px solid #000000;
+}
+
+.uWh1 {
+  font-family: ibmPlexSansMedium;
+  color: #000000;
+  font-weight: 500;
+  margin: 0;
+}
+
+.AddButton {
+  width: 116px;
+  height: 36px;
+  background-color: #0f62fe;
+  display: flex;
+  border-radius: 8px;
+  margin: 0;
+  margin-left: 73vw;
+}
+
+.AddButton:hover {
+  cursor: pointer;
+}
+
+.Button {
+  font-family: ibmPlexSans;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 14px;
+  margin-top: 9px;
+}
+
+.create {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 3;
+}
+
+.box {
+  position: absolute;
+  width: 544px;
+  height: 582px;
+  left: calc(50% - 544px / 2);
+  top: calc(50% - 582px / 2);
+  background: #ffffff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.createH2 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  font-family: ibmPlexSans;
+  width: 400px;
+  margin: 0;
+}
+
+.createClose {
+  height: 16px;
+  width: 16px;
+  font-weight: 600;
+  font-size: 24px;
+  position: fixed;
+  top: 180px;
+  left: 77rem;
+}
+
+.createClose:hover {
+  cursor: pointer;
+}
+
+.contentBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colors {
+  display: flex;
+  gap: 12px;
+  padding: 6px;
+}
+
+.color {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+}
+
+.color:hover {
+  border: 1px dashed #1c6ea4;
+}
+
+.blue {
+  background-color: #edf5ff;
+}
+
+.green {
+  background-color: #defbe6;
+}
+
+.pink {
+  background-color: #fff1f1;
+}
+
+.yellow {
+  background-color: #fcf4d6;
+}
+
+.buttons {
+  float: right;
+  margin-top: 30px;
+}
+
+.section {
+  margin-top: 20px;
+}
+.cncl {
+  width: 81px;
+  background-color: white;
+  color: #0f62fe;
+}
+
+.submt {
+  width: 122px;
+  background-color: #0f62fe;
+  color: white;
+}
+
+.Bttn {
+  height: 36px;
+  border: none;
+  font-family: ibmPlexSansMedium;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.Bttn:hover {
+  cursor: pointer;
+}
+
+.popup {
+  width: 316px;
+  height: 38px;
+  background-color: #defbe6;
+  padding: 15px;
+  border: 1px solid rgba(36, 161, 72, 0.3);
+  border-left: 3px solid #198038;
+  position: relative;
+  top: 30vh;
+  left: 80vw;
+}
+
+.poptext {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: ibmPlexSans;
+  margin: 0;
+  width: 200px;
+  margin-left: 37px;
+  margin-right: 0;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.ppclose {
+  float: right;
+  margin: 0;
+  height: 24px;
+  width: 24px;
+  font-weight: 700;
+}
+.ppclose:hover {
+  cursor: pointer;
+}
+
+.active {
+  border: 1px dashed #f3bb22;
+}
