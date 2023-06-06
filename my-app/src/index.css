@@ -70,7 +70,14 @@ textarea {
 
 .blogss {
   margin-top: 48px;
-  margin-left: 40px;
+  margin-left: 190px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 30px;
 }
 
 .blogTitle {
@@ -91,7 +98,7 @@ textarea {
 
 .blogBody {
   font-family: ibmPlexSans;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
   color: #000000;
 }
@@ -311,8 +318,8 @@ textarea {
   padding: 15px;
   border: 1px solid rgba(36, 161, 72, 0.3);
   border-left: 3px solid #198038;
-  position: relative;
-  top: 30vh;
+  position: absolute;
+  top: 89vh;
   left: 80vw;
 }
 
