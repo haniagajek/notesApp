@@ -1,21 +1,28 @@
 import { useState } from "react";
 
-const Create = ({ refetchData, close, setSuccess }) => {
-  const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
+const CreateEdit = ({ refetchData, close, setSuccess, blog }) => {
+  const [title, setTitle] = useState(blog?.title ?? "");
+  const [body, setBody] = useState(blog?.body ?? "");
   const [isPending, setIsPending] = useState(false);
-  const [color, setColor] = useState("blue");
+  const [color, setColor] = useState(blog?.color ?? "blue");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const blog = { title, body, color };
+    const formBlog = { title, body, color };
 
     setIsPending(true);
 
-    fetch("http://localhost:8000/notes", {
-      method: "POST",
+    // ternary operation
+    const url = Boolean(blog?.id)
+      ? "http://localhost:8000/notes/" + blog.id
+      : "http://localhost:8000/notes";
+
+    const methodName = Boolean(blog?.id) ? "PUT" : "POST";
+
+    fetch(url, {
+      method: methodName,
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(blog),
+      body: JSON.stringify(formBlog),
     }).then(() => {
       setIsPending(false);
       refetchData();
@@ -92,4 +99,4 @@ const Create = ({ refetchData, close, setSuccess }) => {
   );
 };
 
-export default Create;
+export default CreateEdit;

@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 
-export default function Blog({ blog, handleDelete }) {
+export default function Blog({ blog, handleDelete, setEditingBlog }) {
   const [isMenuShown, setIsMenuShown] = useState(false);
 
   function toggleMenu() {
     setIsMenuShown(!isMenuShown);
+  }
+
+  function showEdit() {
+    setEditingBlog(blog);
   }
 
   return (
@@ -20,7 +24,9 @@ export default function Blog({ blog, handleDelete }) {
         </div>
         {isMenuShown && (
           <div className="menu">
-            <div className="menu-item">Edit</div>
+            <div onClick={showEdit} className="menu-item">
+              Edit
+            </div>
             <div onClick={() => handleDelete(blog.id)} className="menu-item ">
               Delete
             </div>

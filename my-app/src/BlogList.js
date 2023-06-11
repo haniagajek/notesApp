@@ -1,9 +1,10 @@
 import { useState } from "react";
-import Create from "./Create";
+import CreateEdit from "./CreateEdit";
 import Blog from "./Blog";
 
 const BlogList = ({ blogs, handleDelete, refetchData, setSuccess }) => {
   const [shown, setShown] = useState(false);
+  const [editingBlog, setEditingBlog] = useState(null);
 
   return (
     <div>
@@ -19,14 +20,27 @@ const BlogList = ({ blogs, handleDelete, refetchData, setSuccess }) => {
       </div>
       <div className="blogss">
         {blogs.map((blog) => (
-          <Blog key={blog.id} blog={blog} handleDelete={handleDelete} />
+          <Blog
+            key={blog.id}
+            blog={blog}
+            handleDelete={handleDelete}
+            setEditingBlog={setEditingBlog}
+          />
         ))}
       </div>
       {shown && (
-        <Create
+        <CreateEdit
           close={() => setShown(false)}
           refetchData={refetchData}
           setSuccess={setSuccess}
+        />
+      )}
+      {Boolean(editingBlog) && (
+        <CreateEdit
+          close={() => setEditingBlog(null)}
+          refetchData={refetchData}
+          setSuccess={setSuccess}
+          blog={editingBlog}
         />
       )}
     </div>

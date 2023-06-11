@@ -381,3 +381,7 @@ textarea {
   float: right;
   position: relative;
 }
+
+.Edition:hover {
+  cursor: pointer;
+}
