@@ -385,3 +385,13 @@ textarea {
 .Edition:hover {
   cursor: pointer;
 }
+
+.backdrop {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 50;
+}
