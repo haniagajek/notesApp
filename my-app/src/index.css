@@ -395,3 +395,20 @@ textarea {
   top: 0;
   z-index: 50;
 }
+
+content {
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  padding: 0 3em;
+}
+
+content nav ul {
+  padding: 0;
+  list-style: none;
+}
+
+content nav ul li {
+  padding: 0.25rem 0.5rem;
+}

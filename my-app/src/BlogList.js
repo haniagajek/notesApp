@@ -1,7 +1,6 @@
 import { useState } from "react";
 import CreateEdit from "./CreateEdit";
 import Blog from "./Blog";
-
 const BlogList = ({ blogs, handleDelete, refetchData, setSuccess }) => {
   const [shown, setShown] = useState(false);
   const [editingBlog, setEditingBlog] = useState(null);
@@ -18,16 +17,26 @@ const BlogList = ({ blogs, handleDelete, refetchData, setSuccess }) => {
           <h3 className="Button bplus">+</h3>
         </div>
       </div>
-      <div className="blogss">
-        {blogs.map((blog) => (
-          <Blog
-            key={blog.id}
-            blog={blog}
-            handleDelete={handleDelete}
-            setEditingBlog={setEditingBlog}
-          />
-        ))}
-      </div>
+      <content>
+        <nav>
+          <ul>
+            <li>11.06.2023</li>
+            <li>10.06.2023</li>
+            <li>09.06.2023</li>
+            <li>08.06.2023</li>
+          </ul>
+        </nav>
+        <div className="blogss">
+          {blogs.map((blog) => (
+            <Blog
+              key={blog.id}
+              blog={blog}
+              handleDelete={handleDelete}
+              setEditingBlog={setEditingBlog}
+            />
+          ))}
+        </div>
+      </content>
       {shown && (
         <CreateEdit
           close={() => setShown(false)}
