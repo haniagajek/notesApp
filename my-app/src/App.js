@@ -6,6 +6,20 @@ const Home = () => {
   const [blogs, setBlogs] = useState(null);
   const [success, setSuccess] = useState(false);
 
+  useEffect(() => {
+    let timeout;
+
+    if (success) {
+      timeout = setTimeout(() => {
+        setSuccess(false);
+      }, 4000);
+    }
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [success]);
+
   const handleDelete = (id) => {
     // const newBlogs = blogs.filter((blog) => blog.id !== id);
     // setBlogs(newBlogs);
