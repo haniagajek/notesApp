@@ -4,6 +4,11 @@ import Blog from "./Blog";
 const BlogList = ({ blogs, handleDelete, refetchData, setSuccess }) => {
   const [shown, setShown] = useState(false);
   const [editingBlog, setEditingBlog] = useState(null);
+  const [shownButton, setShownButton] = useState(false);
+
+  function toggleFolder() {
+    setShownButton(!shownButton);
+  }
 
   return (
     <div>
@@ -19,11 +24,16 @@ const BlogList = ({ blogs, handleDelete, refetchData, setSuccess }) => {
       </div>
       <content>
         <nav>
+          <button onClick={toggleFolder} className="FolderButton">
+            Add a folder{" "}
+          </button>
+          {shownButton && <input type="text" className="Folderinput" />}
           <ul>
-            <li>11.06.2023</li>
-            <li>10.06.2023</li>
-            <li>09.06.2023</li>
-            <li>08.06.2023</li>
+            <li>folder</li>
+            <li>folder</li>
+            <li>folder</li>
+            <li>folder</li>
+            <li>folder</li>
           </ul>
         </nav>
         <div className="blogss">

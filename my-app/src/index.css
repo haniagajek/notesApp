@@ -412,3 +412,24 @@ content nav ul {
 content nav ul li {
   padding: 0.25rem 0.5rem;
 }
+
+.FolderButton {
+  width: 250px;
+  margin-top: 10px;
+  font-family: ibmPlexSans;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  border-radius: 16px;
+}
+
+.FolderButton:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #c5cbd4;
+}
+
+.Folderinput {
+  width: 250px;
+  margin-top: 10px;
+}
